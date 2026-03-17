@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ✅ Keeps logo perfectly aligned and sized */
     .navbar-brand img {
       height: 35px;
       width: auto;
@@ -27,7 +26,8 @@
         <img src="logo.png" alt="MyPortfolio Logo" class="d-inline-block align-text-top">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -42,10 +42,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero text-center text-white d-flex align-items-center justify-content-center">
+  <!-- Removed Bootstrap d-flex classes — centering is now handled entirely in style.css -->
+  <section class="hero text-white">
     <div>
-      <h1 class="fw-bold text-warning mb-3">Hi, I'm <span class="text-white">Andrew Coral</span></h1>
-      <p class="lead mb-4">A Future Web Developer & Designer</p>
+      <h1 class="fw-bold mb-3">
+        <span class="text-warning">Hi, I'm </span>Andrew Coral
+      </h1>
+      <p class="lead mb-4">A Future Web Developer &amp; Designer</p>
     </div>
   </section>
 
