@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Activities | Andrew Portfolio</title>
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    /* Navbar */
-    .navbar-brand img {
-      height: 35px;
-      width: auto;
-    }
-
     /* Header */
     h1.section-title {
       color: #ffc107;
       font-weight: 700;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       text-transform: uppercase;
       letter-spacing: 2px;
+    }
+
+    /* Tighten letter-spacing on narrow screens */
+    @media (max-width: 390px) {
+      h1.section-title {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-bottom: 28px;
+      }
     }
 
     /* Activity Cards */
@@ -37,7 +31,7 @@
       background-color: #111;
       border: 2px solid transparent;
       border-radius: 20px;
-      padding: 30px 20px;
+      padding: 28px 18px;
       text-align: center;
       transition: all 0.3s ease;
       box-shadow: 0 0 10px rgba(255, 193, 7, 0.1);
@@ -51,15 +45,24 @@
 
     .activity-card h3 {
       color: #ffc107;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 390px) {
+      .activity-card h3 {
+        font-size: 1rem;
+      }
+      .activity-card p {
+        font-size: 0.85rem;
+      }
     }
 
     .activity-card p {
       color: #ccc;
-      font-size: 0.95rem;
-      min-height: 50px;
+      font-size: 0.92rem;
+      min-height: 44px;
     }
 
     .btn-view {
@@ -70,6 +73,7 @@
       padding: 10px 20px;
       border: none;
       text-transform: uppercase;
+      min-height: 44px;
     }
 
     .btn-view:hover {
@@ -77,9 +81,8 @@
       color: #000;
     }
 
-    /* Footer */
     footer {
-      margin-top: 80px;
+      margin-top: 60px;
       border-top: 1px solid #222;
     }
   </style>
@@ -88,15 +91,15 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top shadow">
-    <div class="container">
+    <div class="container-fluid px-3">
       <a class="navbar-brand" href="index.html">
-        <img src="logo.png" alt="MyPortfolio Logo" class="d-inline-block align-text-top">
+        <img src="logo.png" alt="MyPortfolio Logo">
       </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -109,47 +112,50 @@
   </nav>
 
   <!-- Activities Section -->
-  <section class="container text-center" style="padding-top: calc(120px + env(safe-area-inset-top, 0px));">
+  <!-- padding-top clears navbar (52px) + safe area + extra breathing room -->
+  <section class="container text-center"
+    style="padding-top: calc(52px + env(safe-area-inset-top, 0px) + 30px); padding-bottom: 40px;">
     <h1 class="section-title">My Activities</h1>
 
     <div class="row g-4 justify-content-center">
 
       <!-- Activity 4 -->
-      <div class="col-md-5">
+      <div class="col-12 col-md-5">
         <div class="activity-card">
           <h3>Activity 4: Galaxy S25 FE Website</h3>
           <p>A responsive website that highlights the features and design of the Galaxy S25 FE smartphone.</p>
-          <a href="https://coralandrew.github.io/galaxy-s25fe-site/" target="_blank" class="btn btn-view mt-2">View
-            Project</a>
+          <a href="https://coralandrew.github.io/galaxy-s25fe-site/" target="_blank" class="btn btn-view mt-2">View Project</a>
         </div>
       </div>
 
       <!-- Activity 5 -->
-      <div class="col-md-5">
+      <div class="col-12 col-md-5">
         <div class="activity-card">
           <h3>Activity 5: Tubbataha Reefs Website</h3>
           <p>An educational website showcasing the beauty and biodiversity of the Tubbataha Reefs Natural Park.</p>
-          <a href="https://coralandrew.github.io/tubbatahareefs/" target="_blank" class="btn btn-view mt-2">View
-            Project</a>
+          <a href="https://coralandrew.github.io/tubbatahareefs/" target="_blank" class="btn btn-view mt-2">View Project</a>
         </div>
       </div>
+
       <!-- Activity 6 -->
-      <div class="col-md-5">
+      <div class="col-12 col-md-5">
         <div class="activity-card">
           <h3>Activity 6: Gallery</h3>
           <p>A Gallery for Cute Fishes</p>
           <a href="https://coralandrew.github.io/gallery/" target="_blank" class="btn btn-view mt-2">View Project</a>
         </div>
       </div>
+
       <!-- Activity 7 -->
-      <div class="col-md-5">
+      <div class="col-12 col-md-5">
         <div class="activity-card">
           <h3>Activity 7: Avatar Gallery</h3>
           <p>Avatar: The Last Airbender Characters</p>
-          <a href=" https://coralandrew.github.io/avatar-gallery/" target="_blank" class="btn btn-view mt-2">View
-            Project</a>
+          <a href="https://coralandrew.github.io/avatar-gallery/" target="_blank" class="btn btn-view mt-2">View Project</a>
         </div>
       </div>
+
+    </div>
   </section>
 
   <!-- Footer -->
@@ -162,5 +168,4 @@
     document.querySelectorAll(".footer-year").forEach(el => el.textContent = new Date().getFullYear());
   </script>
 </body>
-
 </html>
